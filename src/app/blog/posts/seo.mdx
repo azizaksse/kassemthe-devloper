@@ -5,42 +5,14 @@ publishedAt: "2025-04-14"
 tag: "Magic Portfolio"
 ---
 
-## Meta tags
+Magic Portfolio ships with sensible defaults for metadata, schema, and social images. Update the values in `src/resources/content.tsx` and `src/resources/once-ui.config.ts` to personalize titles, descriptions, and `baseURL`.
 
-Magic Portfolio automatically generates meta- and open graph tags for your pages based on the `content.js` file.
+## Social sharing image
 
-## Schema
+Use a static asset from `public`, for example set `home.image` to `/images/og/home.jpg`. Reference that same path in your page metadata so every route has a shareable image.
 
-Magic Portfolio automatically generates schema tags for your pages based on the `content.js` file.
+## Quick checklist
 
-## Open Graph image
-
-Social sharing images (open-graph and twitter) are automatically generated with `next/og`.
-
-<Feedback
-    icon
-    marginBottom="16"
-    description={<>
-        Make sure you have updated the <InlineCode>content.js</InlineCode> file with your own information and the <InlineCode>baseURL</InlineCode> variable in the <InlineCode>config.js</InlineCode> file.
-    </>}
-/>
-
-<CodeBlock
-    marginBottom="16"
-    highlight="4"
-    codes={[
-      {
-        code:
-`export async function generateMetadata() {
-  const title = home.title;
-  const description = home.description;
-  const ogImage = \`https://\/api/og/generate?title=\${encodeURIComponent(title)}\`;
-   ...
-};`,
-        language: "tsx",
-        label: "src/app/{page}/page.tsx"
-      }
-    ]}
-/>
-
-The above declaration generates the social image with the title of the page. You can use a static image by replacing the `ogImage` value with a path to an image in the `public` directory.
+- Set `baseURL` to your domain.
+- Confirm each page has a clear `title` and `description`.
+- Point `home.image` (and any other pages) to a real file in `public/images/og`.
