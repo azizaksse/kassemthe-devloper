@@ -1,0 +1,147 @@
+@use "./breakpoints.scss" as breakpoints;
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: fit-content;
+  background-color: var(--page-background);
+  border-radius: var(--static-space-8);
+  border: 1px solid var(--neutral-border-weak);
+  overflow: hidden;
+}
+
+.linkBlock {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+.item {
+  padding: var(--static-space-16);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: breakpoints.$s) {
+    display: block;
+  }
+}
+
+.mobilePreviewContainer {
+  width: 100%;
+  height: 13rem;
+  border-radius: var(--static-space-8);
+  margin-bottom: var(--static-space-16);
+  overflow: hidden;
+  position: relative;
+  background-color: var(--neutral-background-weak);
+
+  @media (min-width: breakpoints.$s) {
+    display: none;
+  }
+}
+
+.mobileIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+  /* Allows click to pass through to the Link */
+  background-color: white;
+}
+
+.label {
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s;
+  line-height: 1;
+  font-size: 1.25rem;
+  color: var(--neutral-on-background-strong);
+
+  @media (min-width: breakpoints.$s) {
+    font-size: 1.5rem;
+    padding-top: var(--static-space-24);
+    padding-bottom: var(--static-space-24);
+  }
+
+  @media (min-width: breakpoints.$m) {
+    font-size: 3rem;
+  }
+}
+
+.labelActive {
+  mix-blend-mode: difference;
+  z-index: 20;
+  color: #d1d5db;
+}
+
+.arrowButton {
+  display: none;
+  padding: var(--static-space-16);
+  border-radius: 9999px;
+  transition: all 0.3s ease-out;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--neutral-on-background-strong);
+
+  @media (min-width: breakpoints.$s) {
+    display: block;
+  }
+}
+
+.arrowButtonActive {
+  mix-blend-mode: difference;
+  z-index: 20;
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+.divider {
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s linear;
+  width: 0;
+
+  [data-theme="dark"] & {
+    background-color: white;
+  }
+}
+
+.dividerActive {
+  width: 100%;
+}
+
+.revealContainer {
+  position: fixed;
+  z-index: 30;
+  width: 450px;
+  height: 300px;
+  border-radius: var(--static-space-12);
+  pointer-events: none;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: white;
+  overflow: hidden;
+
+  [data-theme="dark"] & {
+    background-color: #030712;
+  }
+}
+
+.revealIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: white;
+  /* Ensure iframe has a background while loading */
+}

@@ -1,0 +1,42 @@
+
+> @once-ui-system/magic-portfolio@2.3.0 dev
+> next dev --hostname 0.0.0.0 --port 3000
+
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of c:\Users\Admin\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * c:\Users\Admin\Desktop\kassem nex\magic-portfolio\package-lock.json
+
+   ▲ Next.js 16.0.1 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ✓ Ready in 961ms
+ ○ Compiling / ...
+ GET / 200 in 43s (compile: 40s, render: 3.1s)
+ ○ Compiling /work ...
+ GET /work 200 in 6.8s (compile: 6.6s, render: 230ms)
+ ○ Compiling /about ...
+ GET /blog 200 in 5.2s (compile: 5.0s, render: 184ms)
+ GET /about 200 in 8.1s (compile: 7.9s, render: 178ms)
+ GET /about 200 in 93ms (compile: 16ms, render: 77ms)
+ ✓ Compiled in 214ms
+ GET /about 200 in 955ms (compile: 669ms, render: 286ms)
+ GET /about 200 in 128ms (compile: 12ms, render: 116ms)
+ GET /about 200 in 264ms (compile: 18ms, render: 247ms)
+ GET /about 200 in 147ms (compile: 32ms, render: 115ms)
+ GET / 200 in 808ms (compile: 469ms, render: 339ms)
+ GET /about 200 in 96ms (compile: 10ms, render: 86ms)
+ GET /work 200 in 865ms (compile: 613ms, render: 252ms)
+ GET /blog 200 in 662ms (compile: 428ms, render: 234ms)
+ GET /gallery 200 in 3.1s (compile: 3.0s, render: 97ms)
+ GET / 200 in 84ms (compile: 10ms, render: 74ms)
+ ○ Compiling /work/[slug] ...
+ GET /work/building-once-ui-a-customizable-design-system 200 in 6.4s (compile: 5.4s, render: 1001ms)
+ GET /work/building-once-ui-a-customizable-design-system 200 in 3.2s (compile: 19ms, render: 3.2s)
+ GET /work/building-once-ui-a-customizable-design-system 200 in 470ms (compile: 35ms, render: 435ms)
+ GET /about 200 in 107ms (compile: 18ms, render: 89ms)

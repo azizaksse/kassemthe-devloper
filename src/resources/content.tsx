@@ -2,20 +2,20 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Kassem",
+  lastName: "Dev",
+  name: "Kassem Dev",
+  role: "Full-stack Developer",
+  avatar: "/images/avatar-kassem.jpg",
+  email: "kassem@example.com",
+  location: "Africa/Algiers", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Arabic", "French"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
   display: true,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Notes on building products, code, and design systems</>,
 };
 
 const social: Social = [
@@ -25,25 +25,31 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/azizaksse",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://dz.linkedin.com/in/bellatrech-belkacem",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
+    link: "https://www.instagram.com/webcrafters.agenc/",
+    essential: true,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.threads.net/@kassem.dev",
+    essential: true,
+  },
+  {
+    name: "WhatsApp",
+    icon: "whatsapp",
+    link: "https://wa.me/2130676610457",
     essential: true,
   },
   {
@@ -59,13 +65,13 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  description: `Portfolio and e-commerce builds by a ${person.role}`,
+  headline: <>Building portfolio and commerce experiences that perform</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Kassem's Work</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -76,8 +82,9 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I'm {person.firstName}, a developer who ships polished portfolios and e-commerce sites with
+      modern web tech. I love shipping fast, reliable products and documenting the journey.
+    </>
   ),
 };
 
@@ -95,16 +102,16 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/kassem",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Kassem is an Algiers-based full-stack developer who builds end-to-end experiences, from
+        performant frontends to reliable commerce backends. His focus is on clear UX, maintainable
+        code, and practical tools for real users.
       </>
     ),
   },
@@ -113,17 +120,17 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Indie Projects",
+        timeframe: "2023 - Present",
+        role: "Full-stack Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Built and shipped client dashboards with Next.js, improving load times by 30% through
+            caching and API optimizations.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Designed reusable UI kits with Once UI to keep visual consistency across freelance work
+            and personal products.
           </>,
         ],
         images: [
@@ -137,17 +144,17 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "North Africa Tech Lab",
+        timeframe: "2021 - 2023",
+        role: "Front-end Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed a component library and documentation site to align engineering and design
+            teams, reducing UI bugs by 40%.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Led the migration to TypeScript and modern tooling, cutting onboarding time for new
+            engineers.
           </>,
         ],
         images: [],
@@ -159,12 +166,12 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of Algiers",
+        description: <>Studied software engineering and human-computer interaction.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Open-source contributions",
+        description: <>Active in OSS communities around Next.js and design systems.</>,
       },
     ],
   },
@@ -173,13 +180,13 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Frontend systems",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Ship polished UIs with Once UI, design tokens, and accessible components.</>
         ),
         tags: [
           {
-            name: "Figma",
+            name: "Once UI",
             icon: "figma",
           },
         ],
@@ -200,14 +207,14 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Full-stack web",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Building next-gen apps with Next.js, TypeScript, and Supabase.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "TypeScript",
+            icon: "typescript",
           },
           {
             name: "Next.js",
@@ -235,8 +242,8 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Portfolio & e-commerce build notes",
+  description: `Notes from ${person.name} on portfolio UX, commerce, and shipping fast web apps`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
